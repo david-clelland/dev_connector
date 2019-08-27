@@ -8,7 +8,7 @@ const {
   check,
   validationResult
 } = require('express-validator');
-const User = require('../../models/user');
+const User = require('../../models/User');
 
 //  @route  POST api/users
 //  @desc   Register User
@@ -78,7 +78,7 @@ router.post('/', [
 
       jwt.sign(payload,
         config.get('jwtSecret'), {
-          expiresIn: 3600
+          expiresIn: 360000
         },
         (err, token) => {
           if (err) throw err;
