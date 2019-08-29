@@ -1,5 +1,10 @@
+// User Schema for MongoDB/Mongoose
+
+// Bring in Mongoose to communicate with MongoDB
+
 const mongoose = require('mongoose');
 
+// Creat User Schema as an Object with key value pairs
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -23,4 +28,5 @@ const UserSchema = new mongoose.Schema({
   }
 });
 
+// Export schema as model with mongoose to MongoDB
 module.exports = User = mongoose.model('user', UserSchema);
