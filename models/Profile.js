@@ -1,5 +1,9 @@
+// Profile Schema for MongoDB/Mongoose
+
+// Bring in Mongoose to communicate with MongoDB
 const mongoose = require('mongoose');
 
+// Creat Profile Schema as an Object with key value pairs
 const ProfileSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
@@ -107,4 +111,6 @@ const ProfileSchema = new mongoose.Schema({
 
 });
 
+
+// Export schema
 module.exports = Profile = mongoose.model('profile', ProfileSchema);
