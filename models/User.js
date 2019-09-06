@@ -4,7 +4,7 @@
 
 const mongoose = require('mongoose');
 
-// Creat User Schema as an Object with key value pairs
+// Create User Schema as an Object with key value pairs
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -27,6 +27,8 @@ const UserSchema = new mongoose.Schema({
     default: Date.now
   }
 });
+
+
 
 // Export schema as model with mongoose to MongoDB
 module.exports = User = mongoose.model('user', UserSchema);
