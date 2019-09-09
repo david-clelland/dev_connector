@@ -28,7 +28,7 @@ const UserSchema = new mongoose.Schema({
   }
 });
 
-
+// TODO add update to User 
 
 // Export schema as model with mongoose to MongoDB
 module.exports = User = mongoose.model('user', UserSchema);
