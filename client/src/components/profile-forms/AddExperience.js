@@ -24,7 +24,7 @@ const AddExperience = ({ addExperience, history }) => {
 
     return (
         <Fragment>
-            <h1 class="large text-primary">
+            <h1 className="large text-primary">
                 Add An Experience
             </h1>
             <p className="lead">
@@ -79,4 +79,4 @@ AddExperience.propTypes = {
     addExperience: PropTypes.func.isRequired,
 }
 
-export default connect(null, { addExperience })(AddExperience)
+export default connect(null, { addExperience })(withRouter(AddExperience))
