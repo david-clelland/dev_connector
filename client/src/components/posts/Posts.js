@@ -6,15 +6,22 @@ import { getPosts } from '../../actions/post'
 
 
 
-const Posts = ({ getPosts, post: { posts, laoding } }) => {
+const Posts = ({ getPosts, post: { posts, loading } }) => {
     useEffect(() => {
         getPosts();
     }, [getPosts])
-    return (
+    return loading ? <Spinner /> : <Fragment>
+        <h1 className="large text-primary">Posts</h1>
+        <p className="lead">
+            <i className="fas fa-user"></i>Welcome to the community
+        </p>
+        {/* {PostForm} */}
         <div>
-            Posts Component
+            {posts.map(post => (
+                <PostItem ky={post._id} post={post} />
+            ))}
         </div>
-    )
+    </Fragment>
 }
 
 Posts.propTypes = {
