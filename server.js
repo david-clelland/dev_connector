@@ -2,7 +2,6 @@
 const express = require('express');
 // require and bring in db.js file with MongoDB database config as connectDB variable
 const connectDB = require('./config/db');
-
 const path = require('path')
 
 // app variable to use express
